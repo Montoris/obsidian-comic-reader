@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Obsidian Comic Reader</title>
+<meta name="description" content="Support, getting-started help, and FAQ for Obsidian Comic Reader, the CBZ and CBR comic reader for iPad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0E; --bg2:#16161B; --card:#1C1C24;
+    --ember:#F05A1E; --ember-light:#F7741E; --gold:#F7A626;
+    --text:#ECECF0; --muted:#9A9AA6; --line:#26262F;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--ember-light);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:10;background:rgba(11,11,14,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1000px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Chakra Petch",sans-serif;font-size:24px;letter-spacing:1px;color:var(--gold)}
+  .brand .dot{width:22px;height:30px;display:block}
+  .navlinks a{color:var(--text);margin-left:24px;font-weight:500;font-size:15px}
+  .navlinks a:hover{color:var(--gold);text-decoration:none}
+  main{padding:56px 0 24px}
+  h1{font-family:"Chakra Petch",sans-serif;font-size:clamp(34px,6vw,52px);letter-spacing:1.5px;color:var(--gold);margin-bottom:6px}
+  .tagline{color:var(--muted);font-size:16px;margin-bottom:30px}
+  h2{font-size:22px;color:var(--ember-light);margin:34px 0 14px}
+  p{margin-bottom:14px}
+  ol,ul{margin:0 0 16px 22px}
+  li{margin-bottom:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px}
+  .qa{border-bottom:1px solid var(--line);padding:16px 0}
+  .qa:last-child{border-bottom:none}
+  .qa h3{font-size:17px;color:var(--gold);margin-bottom:6px}
+  .qa p{color:var(--muted);margin-bottom:0}
+  .contact{background:linear-gradient(180deg,#34281d,#2a221d);border:1px solid var(--line);border-left:4px solid var(--ember);border-radius:12px;padding:22px;text-align:center;margin-top:10px}
+  .contact a{font-weight:600;font-size:18px}
+  .small{font-size:13px;color:#7d736c;margin-top:8px}
+  footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--muted);font-size:14px;margin-top:40px}
+  footer a{margin:0 10px}
+  footer .copy{margin-top:10px;color:#7d736c}
+  code{background:#1d1916;border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:13px;color:var(--gold)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html" style="text-decoration:none"><svg class="dot" viewBox="40 12 70 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="75,18 56,58 70,104 75,134 56,106 50,58" fill="#20202A"/><polygon points="75,18 94,58 100,106 75,134 80,104 94,58" fill="#2E2E3A"/><polygon points="75,18 94,58 56,58" fill="#34343F"/><polyline points="75,18 67,60 79,94 69,120 75,134" fill="none" stroke="#F7741E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg> OBSIDIAN</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <h1>Support</h1>
+    <p class="tagline">Help and answers for Obsidian Comic Reader, the CBZ &amp; CBR reader for iPad.</p>
+
+    <h2>Getting started</h2>
+    <div class="card">
+      <p>Obsidian Comic Reader reads comic archive files (<code>.cbz</code> and <code>.cbr</code>) that you supply. There are three ways to add them:</p>
+      <ol>
+        <li><strong>Files picker:</strong> tap the toolbar menu, choose <strong>Import</strong>, and select files from anywhere the Files app can reach.</li>
+        <li><strong>Drop into the app folder:</strong> using the Files app or a Mac Finder window, copy <code>.cbz</code>/<code>.cbr</code> files straight into the app's folder.</li>
+        <li><strong>iCloud Drive sync (optional):</strong> turn on sync in Settings, then add comics to the <strong>Obsidian Comic Reader</strong> folder in your iCloud Drive on any device and they appear in your library.</li>
+      </ol>
+      <p style="margin-bottom:0">Once imported, your library groups issues into series automatically, tracks reading progress, and lets you browse as a grid, collapsed series, or expandable shelves.</p>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+    <div class="card">
+      <div class="qa">
+        <h3>What file types are supported?</h3>
+        <p>Comic book archives: CBZ (ZIP-based) and CBR (RAR-based). The app does not include any comics itself; you provide your own files.</p>
+      </div>
+      <div class="qa">
+        <h3>How do I read two-page spreads?</h3>
+        <p>Rotate your iPad to landscape while reading. Double-page art is shown as a spread. Pinch any page to zoom into panels and lettering.</p>
+      </div>
+      <div class="qa">
+        <h3>Where are my comics stored?</h3>
+        <p>On your device, and (if you enable sync) in your own iCloud Drive under your Apple Account. The developer has no access to them.</p>
+      </div>
+      <div class="qa">
+        <h3>Does the app collect any data?</h3>
+        <p>No. There are no accounts, no analytics, no ads, and no tracking. See the <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+      <div class="qa">
+        <h3>My iCloud comics aren't appearing.</h3>
+        <p>Make sure iCloud Drive is enabled on the device and that sync is turned on in the app's Settings, then add files to the <strong>Obsidian Comic Reader</strong> folder in iCloud Drive. Syncing can take a moment depending on file size and connection.</p>
+      </div>
+      <div class="qa">
+        <h3>Is there a sample file I can try?</h3>
+        <p>Yes, a public-domain-safe test comic: <a href="sample-comic.cbz">download sample-comic.cbz</a>. Save it, then import it with the steps above.</p>
+      </div>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="contact">
+      <p style="margin-bottom:6px">Still need help? Email the developer:</p>
+      <a href="mailto:nick.rackham@gmail.com">nick.rackham@gmail.com</a>
+      <p class="small">Replies usually come within a few days.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap" style="max-width:1000px">
+    <div>
+      <a href="index.html">Home</a> ·
+      <a href="support.html">Support</a> ·
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="mailto:nick.rackham@gmail.com">Contact</a>
+    </div>
+    <div class="copy">© 2026 Nick Rackham</div>
+  </div>
+</footer>
+</body>
+</html>

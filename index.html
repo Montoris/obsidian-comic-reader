@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obsidian Comic Reader</title>
+<meta name="description" content="Obsidian Comic Reader turns your iPad into the comic reading device it was always meant to be. Import your CBZ and CBR files into a beautiful, self-organizing library. No accounts, no ads, no tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0E; --bg2:#16161B; --card:#1C1C24;
+    --ember:#F05A1E; --ember-light:#F7741E; --gold:#F7A626;
+    --text:#ECECF0; --muted:#9A9AA6; --line:#26262F;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--ember-light);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(11,11,14,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:"Chakra Petch",sans-serif;font-size:24px;letter-spacing:1px;color:var(--gold)}
+  .brand .dot{width:22px;height:30px;display:block}
+  .navlinks a{color:var(--text);margin-left:24px;font-weight:500;font-size:15px}
+  .navlinks a:hover{color:var(--gold);text-decoration:none}
+
+  /* Hero */
+  header.hero{text-align:center;padding:72px 0 56px}
+  .badge{margin:0 auto 28px;display:block;width:230px;height:230px;filter:drop-shadow(0 8px 24px rgba(0,0,0,.55))}
+  h1{font-family:"Chakra Petch",sans-serif;font-size:clamp(44px,8vw,76px);letter-spacing:2px;line-height:1;
+     background:linear-gradient(180deg,var(--ember),var(--ember-light),var(--gold));
+     -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--ember)}
+  .subtitle{font-size:clamp(18px,3vw,22px);color:var(--text);margin-top:14px;font-weight:600}
+  .promo{max-width:620px;margin:18px auto 0;color:var(--muted);font-size:17px}
+  .cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:600;font-size:15px}
+  .btn.primary{background:linear-gradient(180deg,var(--ember-light),var(--ember));color:#fff}
+  .btn.primary:hover{text-decoration:none;filter:brightness(1.08)}
+  .btn.ghost{border:1px solid var(--line);color:var(--text)}
+  .btn.ghost:hover{text-decoration:none;border-color:var(--ember);color:var(--gold)}
+
+  /* Strip */
+  .strip{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;text-align:center}
+  .strip p{font-family:"Chakra Petch",sans-serif;letter-spacing:1.5px;font-size:clamp(18px,4vw,26px);color:var(--gold)}
+  .strip span{color:var(--ember-light)}
+
+  /* Features */
+  section.features{padding:64px 0}
+  .features h2{text-align:center;font-family:"Chakra Petch",sans-serif;font-size:34px;letter-spacing:1.5px;color:var(--text);margin-bottom:8px}
+  .features .lede{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .feat .ic{width:44px;height:44px;border-radius:11px;background:linear-gradient(180deg,var(--ember),var(--ember-light));display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+  .feat h3{font-size:18px;margin-bottom:8px;color:var(--gold)}
+  .feat p{color:var(--muted);font-size:15px}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer a{margin:0 10px}
+  footer .copy{margin-top:10px;color:#7d736c}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <div class="brand"><svg class="dot" viewBox="40 12 70 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="75,18 56,58 70,104 75,134 56,106 50,58" fill="#20202A"/><polygon points="75,18 94,58 100,106 75,134 80,104 94,58" fill="#2E2E3A"/><polygon points="75,18 94,58 56,58" fill="#34343F"/><polyline points="75,18 67,60 79,94 69,120 75,134" fill="none" stroke="#F7741E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg> OBSIDIAN</div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="badge" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Obsidian Comic Reader logo">
+      <defs>
+        <linearGradient id="glassL" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#2A2A36"/>
+          <stop offset="100%" stop-color="#141419"/>
+        </linearGradient>
+        <linearGradient id="glassR" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#3A3A48"/>
+          <stop offset="100%" stop-color="#1C1C24"/>
+        </linearGradient>
+        <linearGradient id="magma" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFC24A"/>
+          <stop offset="50%" stop-color="#F7741E"/>
+          <stop offset="100%" stop-color="#E03A12"/>
+        </linearGradient>
+        <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="5"/>
+        </filter>
+      </defs>
+      <rect x="8" y="8" width="224" height="224" rx="50" fill="#0B0B0E" stroke="#26262F" stroke-width="1.5"/>
+      <polygon points="120,28.8 89.6,92.8 112,166.4 120,214.4 89.6,169.6 80,92.8" fill="url(#glassL)"/>
+      <polygon points="120,28.8 150.4,92.8 160,169.6 120,214.4 128,166.4 150.4,92.8" fill="url(#glassR)"/>
+      <polygon points="120,28.8 150.4,92.8 89.6,92.8" fill="#34343F"/>
+      <polyline points="120,28.8 107.2,96 126.4,150.4 110.4,192 120,214.4" fill="none" stroke="#E03A12" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" filter="url(#glow)"/>
+      <polyline points="120,28.8 107.2,96 126.4,150.4 110.4,192 120,214.4" fill="none" stroke="url(#magma)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <h1>Obsidian Comic Reader</h1>
+    <p class="subtitle">CBR &amp; CBZ reader for iPad</p>
+    <p class="promo">Drop in your CBZ and CBR files and start reading: fast, full-screen, and built for the big iPad display. No accounts, no ads, no tracking.</p>
+    <div class="cta">
+      <a class="btn primary" href="support.html">Get Support</a>
+      <a class="btn ghost" href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap"><p>No accounts. <span>No ads.</span> No tracking. <span>No data collected.</span></p></div>
+</div>
+
+<section class="features">
+  <div class="wrap">
+    <h2>Your comics, beautifully read</h2>
+    <p class="lede">Import your own CBZ and CBR files and they become a beautiful, organized library: covers front and center, series grouped automatically, reading progress tracked for you.</p>
+    <div class="grid">
+      <div class="feat">
+        <div class="ic">📚</div>
+        <h3>A library that organizes itself</h3>
+        <p>Issue names are parsed and grouped into series shelves automatically. Prefer your own system? Assign comics to manual collections that override the grouping.</p>
+      </div>
+      <div class="feat">
+        <div class="ic">🖼️</div>
+        <h3>A reader that gets out of the way</h3>
+        <p>Full-screen, distraction-free reading with instant swipe response. Pinch to zoom into panels and lettering. Rotate to landscape for two-page spreads.</p>
+      </div>
+      <div class="feat">
+        <div class="ic">☁️</div>
+        <h3>Your files, your way</h3>
+        <p>Import with the Files picker, drop files straight into the app's folder, or turn on optional iCloud Drive sync so comics appear across your devices.</p>
+      </div>
+      <div class="feat">
+        <div class="ic">📱</div>
+        <h3>Built for iPad</h3>
+        <p>Designed around the 13-inch display with every orientation supported. Your comics stay on your device and in your own iCloud Drive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="index.html">Home</a> ·
+      <a href="support.html">Support</a> ·
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="mailto:nick.rackham@gmail.com">Contact</a>
+    </div>
+    <div class="copy">© 2026 Nick Rackham. Obsidian Comic Reader reads CBZ and CBR files you provide; it does not include or sell comic content.</div>
+  </div>
+</footer>
+</body>
+</html>
